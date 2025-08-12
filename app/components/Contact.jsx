@@ -82,6 +82,20 @@ const Contact = () => {
           </div>
         )}
       </form>
+      <div className="mt-20">
+        <div className="text-center">
+          <Image src={assets.logo} alt="" className="w-64 mx-auto mb-2" />
+          <div className="w-max flex items-center gap-2 mx-auto">
+            <p>purnadebpaul64@gmail.com</p>
+          </div>
+        </div>
+        <hr className="my-5" />
+        <div>
+          <p className="text-xs text-center">
+            © 2025 Purna Deb Paul. All rights reserved.
+          </p>
+        </div>
+      </div>
     </div>
   );
 };
