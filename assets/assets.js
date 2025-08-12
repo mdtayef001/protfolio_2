@@ -43,8 +43,14 @@ import right_arrow from "./right-arrow.png";
 import send_icon from "./send-icon.png";
 import right_arrow_bold from "./right-arrow-bold.png";
 import right_arrow_bold_dark from "./right-arrow-bold-dark.png";
+import cascade from "./cascade.jpg";
+import fitTracker from "./fit-tracker.jpg";
+import glowmart from "./glowmart.jpg";
 
 export const assets = {
+  cascade,
+  fitTracker,
+  glowmart,
   user_image,
   code_icon,
   code_icon_dark,
@@ -94,24 +100,43 @@ export const assets = {
 
 export const workData = [
   {
-    title: "Frontend project",
-    description: "Web Design",
-    bgImage: "/work-1.png",
+    title: "Fit Tracker",
+    subTitle: "Full-Stack Fitness Tracking Platform",
+    techStack: [
+      react,
+      nodejs,
+      express,
+      mongodb,
+      firebase,
+      jwt,
+      tailwind,
+      framer,
+    ],
+    image: assets.fitTracker,
+    liveLink: "https://fit-tracker-2d229.web.app/",
   },
   {
-    title: "Geo based app",
-    description: "Mobile App",
-    bgImage: "/work-2.png",
+    title: "CascadeBlogs",
+    subTitle: "Full-Stack Blogging Platform",
+    techStack: [
+      react,
+      nodejs,
+      express,
+      mongodb,
+      firebase,
+      jwt,
+      tailwind,
+      framer,
+    ],
+    image: assets.cascade,
+    liveLink: "https://cascadeblog-63b21.web.app/",
   },
   {
-    title: "Photography site",
-    description: "Web Design",
-    bgImage: "/work-3.png",
-  },
-  {
-    title: "UI/UX designing",
-    description: "UI/UX Design",
-    bgImage: "/work-4.png",
+    title: "Glow Mart",
+    subTitle: "Cosmetics eCommerce Website",
+    techStack: [wp, woo],
+    image: assets.glowmart,
+    liveLink: "https://glowmartpoint.com/",
   },
 ];
 
