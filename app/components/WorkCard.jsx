@@ -7,7 +7,11 @@ const WorkCard = ({ work }) => {
   return (
     <div className="border-[1px] border-gray-500 rounded-xl p-4 boxHover duration-500">
       {/* Main project image */}
-      <Image src={image} alt={title} className="w-full h-auto rounded-lg" />
+      <Image
+        src={image}
+        alt={title}
+        className="w-full h-auto rounded-lg  border-b-3 border-gray-400"
+      />
 
       {/* Title */}
       <h3 className="mt-2 font-semibold">{title}</h3>
@@ -30,7 +34,7 @@ const WorkCard = ({ work }) => {
 
       <div className="flex justify-between mt-3">
         <a href={liveLink} target="_blnk">
-          <div className="flex items-center gap-1 text-xs border border-gray-500 rounded-2xl px-4 py-1">
+          <div className="flex items-center gap-1 text-xs border border-gray-500 rounded-2xl hover:-translate-y-1 duration-500 px-4 py-1">
             <p>live preview</p>
             <Image src={assets.arrow_icon} alt="" className="w-2 h-2" />
           </div>

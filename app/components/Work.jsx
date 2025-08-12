@@ -1,8 +1,14 @@
 import { workData } from "@/assets/assets";
-import React from "react";
+import React, { useState } from "react";
 import WorkCard from "./WorkCard";
 
 const Work = () => {
+  const [visibleCount, setVisibleCount] = useState(3); // initially show 3 projects
+
+  const handleLoadMore = () => {
+    setVisibleCount((prevCount) => prevCount + 3); // load 3 more each time
+  };
+
   return (
     <div id="work" className="w-full px-4 md:px-[12%] py-10 scroll-mt-20">
       <h4 className="text-center mb-2 text-lg font-Ovo">My portfolio</h4>
@@ -12,13 +18,25 @@ const Work = () => {
         projects showcasing my expertise in front-end and full-stack
         development.
       </p>
-      <div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 ">
-          {workData.map((work, index) => (
-            <WorkCard work={work} key={index}></WorkCard>
-          ))}
-        </div>
+
+      {/* Projects */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 ">
+        {workData.slice(0, visibleCount).map((work, index) => (
+          <WorkCard work={work} key={index} />
+        ))}
       </div>
+
+      {/* Load More Button */}
+      {visibleCount < workData.length && (
+        <div className="flex justify-center mt-8">
+          <button
+            onClick={handleLoadMore}
+            className="px-6 py-2 border border-gray-700 hover:bg-[#fcf4ff] hover:-translate-y-1 rounded-3xl duration-300"
+          >
+            Load More
+          </button>
+        </div>
+      )}
     </div>
   );
 };

@@ -1,10 +1,11 @@
 "use client";
 import Image from "next/image";
-import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import About from "./components/About";
 import Tools from "./components/Tools";
 import Work from "./components/Work";
+import Contact from "./components/Contact";
+import Navbar from "./components/Navbar";
 
 export default function Home() {
   return (
@@ -12,8 +13,9 @@ export default function Home() {
       <Navbar></Navbar>
       <Header></Header>
       <About></About>
-      <Tools></Tools>
       <Work></Work>
+      <Tools></Tools>
+      <Contact></Contact>
     </>
   );
 }

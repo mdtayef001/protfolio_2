@@ -1,6 +1,7 @@
+"use client";
 import { assets } from "@/assets/assets";
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 const Navbar = () => {
   const [isScroll, setIsScroll] = useState(false);

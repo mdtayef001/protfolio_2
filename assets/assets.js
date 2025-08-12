@@ -9,6 +9,7 @@ import vscode from "./vscode.png";
 import react from "./react.png";
 import nextjs from "./nextjs.png";
 import tailwind from "./tailwind.png";
+import typescript from "./typescript.png";
 import framer from "./framer.png";
 import nodejs from "./nodejs.png";
 import express from "./express.png";
@@ -46,11 +47,17 @@ import right_arrow_bold_dark from "./right-arrow-bold-dark.png";
 import cascade from "./cascade.jpg";
 import fitTracker from "./fit-tracker.jpg";
 import glowmart from "./glowmart.jpg";
+import leafLog from "./leaflog.png";
+import onePause from "./onepause.png";
+import funnelHacker from "./funnelhacker.png";
 
 export const assets = {
   cascade,
   fitTracker,
   glowmart,
+  leafLog,
+  onePause,
+  funnelHacker,
   user_image,
   code_icon,
   code_icon_dark,
@@ -67,6 +74,7 @@ export const assets = {
   express,
   vscode,
   firebase,
+  typescript,
   figma,
   git,
   mongodb,
@@ -138,6 +146,27 @@ export const workData = [
     image: assets.glowmart,
     liveLink: "https://glowmartpoint.com/",
   },
+  {
+    title: "LeafLog",
+    subTitle: "track and manage care tasks for plants",
+    techStack: [react, firebase, tailwind, express, mongodb, nodejs],
+    image: assets.leafLog,
+    liveLink: "https://leaflog-57c1e.web.app/",
+  },
+  {
+    title: "One Pause Solution",
+    subTitle: "Watch eCommerce Website",
+    techStack: [wp, woo],
+    image: assets.onePause,
+    liveLink: "https://onepausesolution.com/",
+  },
+  {
+    title: "Funnel Hacker HQ",
+    subTitle: "Funnel Building Website",
+    techStack: [wp, woo],
+    image: assets.funnelHacker,
+    liveLink: "https://funnelhackerhq.com/",
+  },
 ];
 
 export const serviceData = [
@@ -192,15 +221,16 @@ export const toolsData = [
   assets.react,
   assets.nextjs,
   assets.tailwind,
-  assets.framer,
-  assets.nodejs,
+  assets.typescript,
   assets.express,
   assets.firebase,
+  assets.nodejs,
   assets.mongodb,
+  assets.framer,
   assets.git,
   assets.jwt,
   assets.wp,
   assets.woo,
-  assets.vscode,
+  // assets.vscode,
   assets.figma,
 ];
