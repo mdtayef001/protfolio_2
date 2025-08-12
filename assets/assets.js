@@ -6,7 +6,16 @@ import edu_icon_dark from "./edu-icon-dark.png";
 import project_icon from "./project-icon.png";
 import project_icon_dark from "./project-icon-dark.png";
 import vscode from "./vscode.png";
+import react from "./react.png";
+import nextjs from "./nextjs.png";
+import tailwind from "./tailwind.png";
+import framer from "./framer.png";
+import nodejs from "./nodejs.png";
+import express from "./express.png";
 import firebase from "./firebase.png";
+import jwt from "./jwt.png";
+import wp from "./wp.png";
+import woo from "./woo.png";
 import figma from "./figma.png";
 import git from "./git.png";
 import mongodb from "./mongodb.png";
@@ -43,11 +52,20 @@ export const assets = {
   edu_icon_dark,
   project_icon,
   project_icon_dark,
+  react,
+  nextjs,
+  tailwind,
+  framer,
+  nodejs,
+  jwt,
+  express,
   vscode,
   firebase,
   figma,
   git,
   mongodb,
+  wp,
+  woo,
   right_arrow_white,
   logo,
   mail_icon,
@@ -146,9 +164,18 @@ export const infoList = [
 ];
 
 export const toolsData = [
-  assets.vscode,
+  assets.react,
+  assets.nextjs,
+  assets.tailwind,
+  assets.framer,
+  assets.nodejs,
+  assets.express,
   assets.firebase,
   assets.mongodb,
-  assets.figma,
   assets.git,
+  assets.jwt,
+  assets.wp,
+  assets.woo,
+  assets.vscode,
+  assets.figma,
 ];

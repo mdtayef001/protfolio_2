@@ -3,6 +3,7 @@ import Image from "next/image";
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import About from "./components/About";
+import Tools from "./components/Tools";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Navbar></Navbar>
       <Header></Header>
       <About></About>
+      <Tools></Tools>
     </>
   );
 }
