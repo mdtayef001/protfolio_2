@@ -1,18 +1,14 @@
 import { assets } from "@/assets/assets";
 import Image from "next/image";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 const Navbar = () => {
-  const sideMenuRef = useRef();
-  const openMenu = () => {
-    sideMenuRef.current.style.transform = "translateX(0rem)";
-  };
-  const closeMenu = () => {
-    sideMenuRef.current.style.transform = "translateX(16rem)";
-  };
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const openMenu = () => setIsMenuOpen(true);
+  const closeMenu = () => setIsMenuOpen(false);
   return (
     <>
-      <div className="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-70%]">
+      <div className="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-50%]">
         <Image src={assets.header_bg_color} alt="" className="w-full" />
       </div>
       <nav className="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50">
@@ -61,8 +57,9 @@ const Navbar = () => {
 
         {/* mobile menu */}
         <ul
-          ref={sideMenuRef}
-          className="flex lg:hidden flex-col gap-4 py-20 px-10 fixed -right-0 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500"
+          className={`flex lg:hidden flex-col gap-4 py-20 px-10 fixed right-0 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition-transform duration-500 ${
+            isMenuOpen ? "translate-x-0" : "translate-x-64"
+          }`}
         >
           <div className="absolute right-6 top-6" onClick={closeMenu}>
             <Image
@@ -72,27 +69,27 @@ const Navbar = () => {
             />
           </div>
           <li>
-            <a className="font-Ovo" href="#top">
+            <a className="font-Ovo" href="#top" onClick={closeMenu}>
               Home
             </a>
           </li>
           <li>
-            <a className="font-Ovo" href="#about">
+            <a className="font-Ovo" href="#about" onClick={closeMenu}>
               About me
             </a>
           </li>{" "}
           <li>
-            <a className="font-Ovo" href="#services">
+            <a className="font-Ovo" href="#services" onClick={closeMenu}>
               Services
             </a>
           </li>{" "}
           <li>
-            <a className="font-Ovo" href="#work">
+            <a className="font-Ovo" href="#work" onClick={closeMenu}>
               My Work
             </a>
           </li>{" "}
           <li>
-            <a className="font-Ovo" href="#contact">
+            <a className="font-Ovo" href="#contact" onClick={closeMenu}>
               Contact me
             </a>
           </li>
