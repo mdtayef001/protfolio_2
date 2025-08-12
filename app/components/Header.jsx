@@ -13,7 +13,7 @@ const Header = () => {
         <Image src={assets.hand_icon} alt="" className="w-6" />
       </h3>
       <h1 className="text-3xl sm:text-6x1 lg:text-[66px] font-Ovo">
-        Frontend Focused <br />
+        - Frontend Focused -<br />
         MERN Stack Developer.
       </h1>
 

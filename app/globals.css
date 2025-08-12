@@ -7,3 +7,10 @@
 .font-Ovo {
   font-family: Ovo, sans-serif !important;
 }
+.lightHover:hover {
+  background-color: #fcf4ff;
+}
+
+.boxHover:hover {
+  box-shadow: 4px 4px 0 #000000;
+}
