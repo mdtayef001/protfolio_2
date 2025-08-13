@@ -57,7 +57,7 @@ import {
   FaGithub,
   FaInstagram,
 } from "react-icons/fa";
-
+import { IoMailUnreadOutline } from "react-icons/io5";
 export const assets = {
   cascade,
   fitTracker,
@@ -243,6 +243,10 @@ export const toolsData = [
 ];
 
 export const socialLinks = [
+  {
+    icon: <IoMailUnreadOutline size={18} />,
+    url: "mailto:purnadebpaul64@gmail.com",
+  },
   { icon: <FaGithub size={18} />, url: "https://github.com/purnadebpaul64" },
   {
     icon: <FaLinkedinIn size={18} />,

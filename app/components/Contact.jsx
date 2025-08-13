@@ -41,7 +41,7 @@ const Contact = () => {
 
       <form
         onSubmit={onSubmit}
-        className="max-w-2xl mx-auto border border-gray-500 rounded-xl p-4 backdrop-blur-2xl bg-white/150"
+        className="max-w-2xl mx-auto border border-gray-500 rounded-xl p-4 backdrop-blur-2xl bg-white/150 "
       >
         <div className="grid sm:grid-cols-2 gap-6  mb-8">
           <input

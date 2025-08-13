@@ -43,23 +43,35 @@ const Navbar = () => {
           } duration-300`}
         >
           <li>
-            <a href="#top" className="font-Ovo">
+            <a
+              href="#top"
+              className="font-Ovo relative pb-1 before:absolute before:bottom-0 before:left-0 before:w-full before:h-0.5 before:bg-black before:scale-x-0 before:origin-center before:transition-transform before:duration-300 hover:before:scale-x-100"
+            >
               Home
             </a>
           </li>
           <li>
-            <a href="#about" className="font-Ovo">
+            <a
+              href="#about"
+              className="font-Ovo relative pb-1 before:absolute before:bottom-0 before:left-0 before:w-full before:h-0.5 before:bg-black before:scale-x-0 before:origin-center before:transition-transform before:duration-300 hover:before:scale-x-100"
+            >
               About Me
             </a>
           </li>
           <li>
-            <a href="#services" className="font-Ovo">
-              Services
+            <a
+              href="#mywork"
+              className="font-Ovo relative pb-1 before:absolute before:bottom-0 before:left-0 before:w-full before:h-0.5 before:bg-black before:scale-x-0 before:origin-center before:transition-transform before:duration-300 hover:before:scale-x-100"
+            >
+              My Work
             </a>
           </li>
           <li>
-            <a href="#work" className="font-Ovo">
-              My Work
+            <a
+              href="#skills"
+              className="font-Ovo relative pb-1 before:absolute before:bottom-0 before:left-0 before:w-full before:h-0.5 before:bg-black before:scale-x-0 before:origin-center before:transition-transform before:duration-300 hover:before:scale-x-100"
+            >
+              Skills
             </a>
           </li>
         </ul>
