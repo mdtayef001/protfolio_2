@@ -129,6 +129,23 @@ export const workData = [
     ],
     image: assets.fitTracker,
     liveLink: "https://fit-tracker-2d229.web.app/",
+    github: "https://github.com/purnadebpaul64/fit-tracker-client",
+    description:
+      "FitTracker is a full-stack fitness tracking and booking platform built with MERN Stack and Firebase Authentication, enabling secure role-based access for Members, Trainers, and Admins. Users can book personal training slots, join classes, apply to become trainers, make Stripe payments, and engage with the community forum. Admins get powerful analytics dashboards, trainer management tools, and transaction tracking. The platform features a responsive UI with Material Tailwind, Framer Motion animations, and modern UX.",
+    challengesFaced: [
+      "Synchronizing Firebase Authentication with custom JWT token validation for secure API access",
+      "Implementing role-based dashboards with completely separate UI/UX for Admin, Trainer, and Member",
+      "Managing Stripe payment flow for variable pricing plans and dynamic slot booking",
+      "Optimizing database queries in MongoDB without Mongoose while maintaining performance",
+      "Ensuring smooth state management and data fetching using React Query",
+    ],
+    futurePlans: [
+      "Add real-time chat between trainers and members",
+      "Integrate AI-based fitness recommendations and personalized workout plans",
+      "Introduce a mobile app version for iOS and Android",
+      "Enable video streaming for live virtual classes",
+      "Expand the analytics dashboard with more granular user engagement data",
+    ],
   },
   {
     title: "CascadeBlogs",

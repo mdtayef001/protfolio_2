@@ -3,10 +3,10 @@ import React, { useState } from "react";
 import WorkCard from "./WorkCard";
 
 const Work = () => {
-  const [visibleCount, setVisibleCount] = useState(3); // initially show 3 projects
+  const [visibleCount, setVisibleCount] = useState(3);
 
   const handleLoadMore = () => {
-    setVisibleCount((prevCount) => prevCount + 3); // load 3 more each time
+    setVisibleCount((prevCount) => prevCount + 3);
   };
 
   return (
@@ -20,7 +20,7 @@ const Work = () => {
       </p>
 
       {/* Projects */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 ">
         {workData.slice(0, visibleCount).map((work, index) => (
           <WorkCard work={work} key={index} />
         ))}
