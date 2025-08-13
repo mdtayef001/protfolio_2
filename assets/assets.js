@@ -51,6 +51,13 @@ import leafLog from "./leaflog.png";
 import onePause from "./onepause.png";
 import funnelHacker from "./funnelhacker.png";
 
+import {
+  FaFacebookF,
+  FaLinkedinIn,
+  FaGithub,
+  FaInstagram,
+} from "react-icons/fa";
+
 export const assets = {
   cascade,
   fitTracker,
@@ -233,4 +240,20 @@ export const toolsData = [
   assets.woo,
   // assets.vscode,
   assets.figma,
+];
+
+export const socialLinks = [
+  { icon: <FaGithub size={18} />, url: "https://github.com/purnadebpaul64" },
+  {
+    icon: <FaLinkedinIn size={18} />,
+    url: "www.linkedin.com/in/purna-deb-paul-sanju",
+  },
+  {
+    icon: <FaInstagram size={18} />,
+    url: "https://www.instagram.com/purna.deb.paul.sanju/",
+  },
+  {
+    icon: <FaFacebookF size={18} />,
+    url: "https://www.facebook.com/purna.deb.paul.sanju",
+  },
 ];

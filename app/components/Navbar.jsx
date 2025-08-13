@@ -1,7 +1,8 @@
 "use client";
-import { assets } from "@/assets/assets";
+import { assets, socialLinks } from "@/assets/assets";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import SocialSidebar from "./SocialSidebar";
 
 const Navbar = () => {
   const [isScroll, setIsScroll] = useState(false);
@@ -23,6 +24,7 @@ const Navbar = () => {
       <div className="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-70%]">
         <Image src={assets.header_bg_color} alt="" className="w-full" />
       </div>
+      <SocialSidebar></SocialSidebar>
       <nav
         className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 ${
           isScroll ? "bg-white/50 backdrop-blur-lg shadow-sm" : ""
@@ -77,7 +79,7 @@ const Navbar = () => {
 
         {/* mobile menu */}
         <ul
-          className={`flex lg:hidden flex-col gap-4 py-20 px-10 fixed right-0 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition-transform duration-500 ${
+          className={`flex lg:hidden flex-col gap-4 py-20 px-6 fixed right-0 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition-transform duration-500 ${
             isMenuOpen ? "translate-x-0" : "translate-x-64"
           }`}
         >
@@ -97,22 +99,35 @@ const Navbar = () => {
             <a className="font-Ovo" href="#about" onClick={closeMenu}>
               About me
             </a>
-          </li>{" "}
+          </li>
           <li>
             <a className="font-Ovo" href="#services" onClick={closeMenu}>
               Services
             </a>
-          </li>{" "}
+          </li>
           <li>
             <a className="font-Ovo" href="#work" onClick={closeMenu}>
               My Work
             </a>
-          </li>{" "}
+          </li>
           <li>
             <a className="font-Ovo" href="#contact" onClick={closeMenu}>
               Contact me
             </a>
           </li>
+          <div className="flex gap-2 px-3 py-2 border border-gray-600 rounded-full justify-center">
+            {socialLinks.map((social, index) => (
+              <a
+                key={index}
+                href={social.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 border border-gray-400 rounded-full text-gray-700 hover:text-black hover:border-black socialHover hover:-translate-y-1 duration-500 backdrop-blur-2xl"
+              >
+                {social.icon}
+              </a>
+            ))}
+          </div>
         </ul>
       </nav>
     </>
