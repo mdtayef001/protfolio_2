@@ -13,6 +13,7 @@ const WorkModal = ({ isOpen, onClose, work }) => {
     description,
     github,
     subTitle,
+    keyHighlights,
     challengesFaced,
     futurePlans,
   } = work;
@@ -94,19 +95,38 @@ const WorkModal = ({ isOpen, onClose, work }) => {
             </p>
           </div>
 
+          {/* Highlights */}
+          <div>
+            <h4 className="font-semibold text-lg text-gray-700 mb-2">
+              Key Highlights
+            </h4>
+            {keyHighlights
+              ? keyHighlights.map((h, index) => (
+                  <p
+                    key={index}
+                    className="text-gray-600 text-sm flex items-center gap-2 mb-1"
+                  >
+                    <FaRegArrowAltCircleRight /> {h}
+                  </p>
+                ))
+              : "No additional Highlights available."}
+          </div>
+
           {/* Challenges */}
           <div>
             <h4 className="font-semibold text-lg text-gray-700 mb-2">
               Challenges Faced
             </h4>
-            {challengesFaced.map((challenge, index) => (
-              <p
-                key={index}
-                className="text-gray-600 text-sm flex items-center gap-2 mb-1"
-              >
-                <FaRegArrowAltCircleRight /> {challenge}
-              </p>
-            ))}
+            {challengesFaced
+              ? challengesFaced.map((challenge, index) => (
+                  <p
+                    key={index}
+                    className="text-gray-600 text-sm flex items-center gap-2 mb-1"
+                  >
+                    <FaRegArrowAltCircleRight /> {challenge}
+                  </p>
+                ))
+              : "No Challenges Found"}
           </div>
 
           {/* Future Plans */}
@@ -114,14 +134,16 @@ const WorkModal = ({ isOpen, onClose, work }) => {
             <h4 className="font-semibold text-lg text-gray-700 mb-2">
               Future Plans
             </h4>
-            {futurePlans.map((plan, index) => (
-              <p
-                key={index}
-                className="text-gray-600 text-sm flex items-center gap-2 mb-1"
-              >
-                <FaRegArrowAltCircleRight /> {plan}
-              </p>
-            ))}
+            {futurePlans
+              ? futurePlans.map((plan, index) => (
+                  <p
+                    key={index}
+                    className="text-gray-600 text-sm flex items-center gap-2 mb-1"
+                  >
+                    <FaRegArrowAltCircleRight /> {plan}
+                  </p>
+                ))
+              : "No Future Plans Found"}
           </div>
         </div>
       </div>
