@@ -1,7 +1,8 @@
 import { assets } from "@/assets/assets";
 import Image from "next/image";
 import React, { useState } from "react";
-import WorkModal from "./WorkModal"; // Import modal
+import WorkModal from "./WorkModal";
+import { motion } from "framer-motion";
 
 const WorkCard = ({ work }) => {
   const { title, image, techStack, subTitle, liveLink } = work;
@@ -9,8 +10,13 @@ const WorkCard = ({ work }) => {
 
   return (
     <>
-      {/* Card */}
-      <div className="border-[1px] border-gray-500 rounded-xl p-4 boxHover duration-500">
+      <motion.div
+        className="border-[1px] border-gray-500 rounded-xl p-4 boxHover duration-500"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        viewport={{ once: false, amount: 0.2 }}
+      >
         {/* Main project image */}
         <Image
           src={image}
@@ -27,12 +33,13 @@ const WorkCard = ({ work }) => {
           <p className="text-xs underline">Tech Stack</p>
           <div className="flex gap-2 mt-2">
             {techStack.map((img, index) => (
-              <div
+              <motion.div
                 key={index}
                 className="w-7 h-7 relative border p-1 rounded-2xl"
+                whileHover={{ rotate: 10, scale: 1.1 }}
               >
                 <Image src={img} alt="" />
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -40,10 +47,14 @@ const WorkCard = ({ work }) => {
         {/* Buttons */}
         <div className="flex justify-between mt-3">
           <a href={liveLink} target="_blank" rel="noopener noreferrer">
-            <div className="flex items-center gap-1 text-xs border border-gray-500 rounded-2xl hover:-translate-y-1 duration-500 px-4 py-1">
+            <motion.div
+              className="flex items-center gap-1 text-xs border border-gray-500 rounded-2xl px-4 py-1"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
               <p>live preview</p>
               <Image src={assets.arrow_icon} alt="" className="w-2 h-2" />
-            </div>
+            </motion.div>
           </a>
           <button
             onClick={() => setIsModalOpen(true)}
@@ -52,7 +63,7 @@ const WorkCard = ({ work }) => {
             details
           </button>
         </div>
-      </div>
+      </motion.div>
 
       {/* Modal */}
       <WorkModal
