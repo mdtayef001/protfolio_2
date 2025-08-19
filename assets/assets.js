@@ -1,4 +1,4 @@
-import user_image from "./user-image.svg";
+import user_image from "./user-image.webp";
 import code_icon from "./code-icon.png";
 import code_icon_dark from "./code-icon-dark.png";
 import edu_icon from "./edu-icon.png";
@@ -27,7 +27,7 @@ import mail_icon_dark from "./mail_icon_dark.png";
 import profile_img from "./profile-img.png";
 import download_icon from "./download-icon.png";
 import hand_icon from "./hand-icon.png";
-import header_bg_color from "./header-bg-color.png";
+import header_bg_color from "./header-bg-color.webp";
 import moon_icon from "./moon_icon.png";
 import sun_icon from "./sun_icon.png";
 import arrow_icon from "./arrow-icon.png";
@@ -381,7 +381,7 @@ export const socialLinks = [
   { icon: <FaGithub size={18} />, url: "https://github.com/purnadebpaul64" },
   {
     icon: <FaLinkedinIn size={18} />,
-    url: "www.linkedin.com/in/purna-deb-paul-sanju",
+    url: "https://www.linkedin.com/in/purna-deb-paul-sanju",
   },
   {
     icon: <FaInstagram size={18} />,

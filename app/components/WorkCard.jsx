@@ -11,11 +11,12 @@ const WorkCard = ({ work }) => {
   return (
     <>
       <motion.div
-        className="border-[1px] border-gray-500 rounded-xl p-4 boxHover duration-500"
+        className="border-[1px] border-gray-500 rounded-xl p-4 boxHover duration-500 cursor-pointer"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
         viewport={{ once: false, amount: 0.2 }}
+        onClick={() => setIsModalOpen(true)}
       >
         {/* Main project image */}
         <Image
