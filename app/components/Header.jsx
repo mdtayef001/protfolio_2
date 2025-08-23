@@ -55,7 +55,7 @@ const Header = () => {
           download
           className="px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2"
         >
-          Download My Resume{" "}
+          Download My Resume
           <Image src={assets.download_icon} alt="" className="w-4" />
         </motion.a>
       </div>
