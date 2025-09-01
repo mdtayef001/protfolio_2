@@ -1,4 +1,4 @@
-import user_image from "./user-image.webp";
+import user_image from "./user-image.png";
 import code_icon from "./code-icon.png";
 import code_icon_dark from "./code-icon-dark.png";
 import edu_icon from "./edu-icon.png";
@@ -342,15 +342,15 @@ export const infoList = [
     iconDark: assets.edu_icon_dark,
     title: "Education",
     institute: "Institute of Science & Technology",
-    description: "B.Sc. in Computer Science and Engineering",
+    description: "Bachelor's degree, Bachelor of Business Administration - BBA",
     duration: "Running",
   },
   {
     icon: assets.project_icon,
     iconDark: assets.project_icon_dark,
     title: "Expriences",
-    institute: "TechyPark Technologies, Inc.",
-    description: "Junior Frontend Developer",
+    institute: "The Shark Web.",
+    description: "Senior Full Stack Developer",
     duration: "2023 ( jan ) - 2025 ( feb )",
   },
 ];

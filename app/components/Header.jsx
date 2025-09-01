@@ -24,7 +24,7 @@ const Header = () => {
         transition={{ duration: 0.6, delay: 0.3 }}
         className="flex items-end gap-2 text-xl md:text-3xl lg:text-xl mb-3 font-Ovo"
       >
-        Hi! I'm Purna Deb Paul
+        Hi! I'm Md. Tayef
         <Image src={assets.hand_icon} alt="" className="w-6" />
       </motion.h3>
       <motion.h1
@@ -44,14 +44,14 @@ const Header = () => {
         className="max-w-2xl md:text-xl lg:text-sm mx-auto font-Ovo"
       >
         Frontend Engineer | React & MERN Stack Developer | Focused on Scalable
-        Web Apps, Clean UI & Engaging UX | WordPress Enthusiast
+        Web Apps, Clean UI & Engaging UX | WordPress and Wix Enthusiast
       </motion.p>
       <div className="flex flex-col sm:flex-row items-center gap-4 mt-4">
         <motion.a
           initial={{ y: 30, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 1 }}
-          href="/purnadebpaulresume.pdf"
+          href="" //change needed
           download
           className="px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2"
         >
